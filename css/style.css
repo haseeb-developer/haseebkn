@@ -340,7 +340,8 @@ span {
 .about-content p {
   position: relative;
   font-size: 1.6rem;
-  margin: 2rem 0 3rem;
+  margin: 2rem auto 3rem;
+  max-width: 80%;
 }
 
 .btn-box.btns {
