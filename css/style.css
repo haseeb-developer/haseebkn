@@ -973,3 +973,12 @@ section:nth-child(odd) .animate.scroll {
     width: 0;
   }
 }
+
+#wave {
+  width: 100%;
+  top: 100%;
+  background-image: url(/images/wave2.png);
+  right: 0;
+  height: 11em;
+  position: absolute;
+}
