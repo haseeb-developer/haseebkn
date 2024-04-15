@@ -48,13 +48,13 @@ body {
   background-color: var(--bg-color);
 }
 
-.logo {
+/* .logo {
   position: relative;
   font-size: 2.5rem;
   color: var(--text-color);
   font-family: "Bungee Spice", sans-serif;
   font-weight: 600;
-}
+} */
 
 .header a img {
   max-width: 14rem;
@@ -294,6 +294,7 @@ section {
 }
 
 .heading {
+  font-family: "Dancing Script", cursive;
   position: relative;
   font-size: 5rem;
   margin-bottom: 3rem;
@@ -302,6 +303,7 @@ section {
 
 span {
   color: var(--main-color);
+  font-family: "Dancing Script", cursive;
 }
 
 .about-img {
@@ -344,7 +346,8 @@ span {
 .about-content h3 {
   position: relative;
   display: inline-block;
-  font-size: 2.6rem;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
 }
 
 .about-content p {
