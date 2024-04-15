@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +52,12 @@ body {
   position: relative;
   font-size: 2.5rem;
   color: var(--text-color);
+  font-family: "Bungee Spice", sans-serif;
   font-weight: 600;
+}
+
+.header a img {
+  max-width: 14rem;
 }
 
 .navbar {
@@ -87,7 +94,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0 9%;
-  /* background: url("/images/home.jpg") no-repeat; */
+  background: url("/images/background.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -100,6 +107,7 @@ section {
 .home-content h1 {
   position: relative;
   display: inline-block;
+  font-family: "Dancing Script", cursive;
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.3;
@@ -107,6 +115,8 @@ section {
 
 .home-content h1 span {
   color: var(--text-color);
+  font-family: "Pacifico", cursive;
+  font-weight: bold;
 }
 
 .home-content .text-animate {
