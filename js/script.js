@@ -1,3 +1,34 @@
+// script.js
+const content = document.getElementById("content");
+
+const icons = [
+  { class: "fab fa-html5" },
+  { class: "fab fa-css3-alt" },
+  { class: "fab fa-js-square" },
+  { class: "fab fa-sass" },
+  { class: "fab fa-php" },
+  { class: "fab fa-laravel" },
+  { class: "fab fa-wordpress" },
+  { class: "fab fa-shopify" },
+  { class: "fas fa-database" },
+];
+
+function loadContent() {
+  const totalIcons = 3 * icons.length; // Repeat the icons to ensure a continuous loop
+  for (let i = 0; i < totalIcons; i++) {
+    const icon = icons[i % icons.length]; // Loop through icons array
+    const card = document.createElement("div");
+    card.className = "icon-card";
+    card.innerHTML = `<i class="${icon.class}"></i>`;
+    content.appendChild(card);
+  }
+}
+
+// Initial load
+loadContent();
+
+// !=======================
+
 // toggle icon navbar
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");

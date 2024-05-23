@@ -21,6 +21,70 @@
   --main-color: #b041b4;
 }
 
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #112e42;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  animation: scroll 70s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.icon-card {
+  display: inline-block;
+  /* border: 1px solid #ddd; */
+  padding: 20px;
+  margin: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 170px;
+  box-sizing: border-box;
+  background-color: #083f64;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.icon-card i {
+  font-size: 56px;
+  margin-bottom: 8px;
+}
+
+.scroll-container::before,
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, #083f64 0%, transparent 100%);
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, #083f64 0%, transparent 100%);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
