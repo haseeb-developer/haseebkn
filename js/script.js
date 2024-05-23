@@ -2,15 +2,15 @@
 const content = document.getElementById("content");
 
 const icons = [
-  { class: "fab fa-html5" },
-  { class: "fab fa-css3-alt" },
-  { class: "fab fa-js-square" },
-  { class: "fab fa-sass" },
-  { class: "fab fa-php" },
-  { class: "fab fa-laravel" },
-  { class: "fab fa-wordpress" },
-  { class: "fab fa-shopify" },
-  { class: "fas fa-database" },
+  { class: "fab fa-html5", name: "HTML" },
+  { class: "fab fa-css3-alt", name: "CSS" },
+  { class: "fab fa-js-square", name: "JavaScript" },
+  { class: "fab fa-sass", name: "Sass" },
+  { class: "fab fa-php", name: "PHP" },
+  { class: "fab fa-laravel", name: "Laravel" },
+  { class: "fab fa-wordpress", name: "WordPress" },
+  { class: "fab fa-shopify", name: "Shopify" },
+  { class: "fas fa-database", name: "SQL" },
 ];
 
 function loadContent() {
@@ -19,7 +19,7 @@ function loadContent() {
     const icon = icons[i % icons.length]; // Loop through icons array
     const card = document.createElement("div");
     card.className = "icon-card";
-    card.innerHTML = `<i class="${icon.class}"></i>`;
+    card.innerHTML = `<i class="${icon.class}"></i><p>${icon.name}</p>`;
     content.appendChild(card);
   }
 }
