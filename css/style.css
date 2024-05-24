@@ -158,7 +158,7 @@ section {
 .home {
   display: flex;
   align-items: center;
-  padding: 0 9%;
+  /* padding: 0 9%; */
   background: url("/images/background.png") no-repeat;
   background-size: cover;
   background-position: center;
@@ -826,159 +826,23 @@ section:nth-child(odd) .animate.scroll {
   width: 0;
 }
 
+#projects-main {
+  padding: 80px 0;
+}
+
 /* Breakpoints */
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 55%;
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-@media (max-width: 991px) {
-  .header {
-    padding: 2rem 4%;
-  }
-
-  section {
-    padding: 10rem 4% 2rem;
-  }
-
-  .home {
-    padding: 0 4%;
-  }
-
-  .footer {
-    padding: 2rem 4%;
+@keyframes showRight {
+  100% {
+    width: 0;
   }
 }
-
-@media (max-width: 768px) {
-  .header {
-    background: var(--bg-color);
-  }
-
-  #menu-icon {
-    display: block;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    width: 100%;
-    padding: 1rem 4%;
-    background: var(--main-color);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: 0.25s ease;
-    transition-delay: 0.25s;
-  }
-
-  .navbar.active {
-    left: 0;
-    transition-delay: 0s;
-  }
-
-  .navbar .active-nav {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    z-index: -1;
-    transition: 0.25s ease;
-    transition-delay: 0s;
-  }
-
-  .navbar.active .active-nav {
-    left: 0;
-    transition-delay: 0.25s;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    transform: translateX(-20rem);
-    transition: 0.25s ease;
-    transition-delay: 0s;
-  }
-
-  .navbar.active a {
-    transform: translateX(0);
-    transition-delay: 0.25s;
-  }
-
-  .home-imgHover {
-    pointer-events: none;
-    background: var(--bg-color);
-    opacity: 0.6;
-  }
-}
-
-@media (max-width: 520px) {
-  html {
-    font-size: 50%;
-  }
-
-  .home-content h1 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .home-sci {
-    width: 160px;
-  }
-
-  .home-sci a {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-@media (max-width: 462px) {
-  .home-content h1 {
-    font-size: 5.2rem;
-  }
-
-  .education {
-    padding: 10rem 4% 5rem 5%;
-  }
-
-  .contact form .input-box .input-field {
-    width: 100%;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-  }
-
-  .footer p {
-    margin-top: 2rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 371px) {
-  .home {
-    justify-content: center;
-  }
-
-  .home-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-content h1 {
-    font-size: 5rem;
-  }
-}
-
-/* KEYFRAMES ANIMATION */
 
 @keyframes homeBgText {
   0%,
@@ -1010,18 +874,6 @@ section:nth-child(odd) .animate.scroll {
   }
 }
 
-@keyframes aboutSpinner {
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes showRight {
-  100% {
-    width: 0;
-  }
-}
-
 #wave {
   width: 100%;
   top: 100%;
@@ -1029,4 +881,81 @@ section:nth-child(odd) .animate.scroll {
   right: 0;
   height: 11em;
   position: absolute;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #b041b4;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #b041b4;
+  color: white;
+}
+
+.pagination .active {
+  background-color: #b041b4;
+  color: white;
+}
+
+/* .card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 4em);
+  gap: 20px;
+} */
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 2px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: #083f64;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.card-title {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+#page-numbers {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+.project_link {
+  text-decoration: none;
+  color: #00e1ff;
+  font-size: 17px;
 }

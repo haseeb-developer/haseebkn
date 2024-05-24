@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mediaq.css" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -41,6 +42,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
 
         <span class="active-nav"></span>
       </nav>
@@ -97,6 +99,64 @@
       </div>
     </section>
 
+    <!--  Skills Section ============================================================= -->
+
+    <section id="projects-main">
+      <div id="data-container" data-aos="zoom-out">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="./images/project1-front.png" alt="Image 1" />
+            <h3 class="card-title">Outdoor Family Hub</h3>
+            <a
+              href="https://family-outdoor.vercel.app/"
+              target="_blank"
+              class="project_link"
+              >Learn More</a
+            >
+          </div>
+          <div class="card">
+            <img src="./images/project3.png" alt="Image 2" />
+            <h3 class="card-title">Simple to advanced words</h3>
+            <a
+              href="https://simple-to-advanced-words.vercel.app/"
+              target="_blank"
+              class="project_link"
+              >Learn More</a
+            >
+          </div>
+          <div class="card">
+            <img src="./images/project-2-front.png" alt="Image 3" />
+            <h3 class="card-title">Password Generator</h3>
+            <a
+              href="https://password-generator-jet-iota.vercel.app/"
+              class="project_link"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+          <div class="card">
+            <img src="./images/project4-front.png" alt="Image 4" />
+            <h3 class="card-title">Pattern Lock</h3>
+            <a
+              href="https://draw-phone-pattern.vercel.app/"
+              class="project_link"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination" id="pagination" data-aos="zoom-in">
+        <a href="#" id="prev">Previous</a>
+        <a href="#" class="page-link" data-page="1">1</a>
+        <a href="#" class="page-link" data-page="2">2</a>
+        <a href="#" id="next">Next</a>
+        <p id="page-numbers"></p>
+      </div>
+    </section>
+
     <!-- CONTACT SECTION -->
 
     <!-- Footer -->
@@ -124,5 +184,6 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="./js/projects.js"></script>
   </body>
 </html>
